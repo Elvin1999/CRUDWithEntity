@@ -1,0 +1,32 @@
+﻿@model RazorProject.Models.PersonListViewModel
+
+@{
+    
+    string title = "Our Razor Introduction";
+}
+
+
+    @{ 
+        var result = (bool)ViewData["HR"];
+
+    }
+
+         <div style="color:red;font-size:30px;text-align:right;position:absolute;top:0;right:0;" >
+             Added SuccesFully
+         </div>
+         <person-list count="1"></person-list>
+
+    @foreach (var item in Model.Persons)
+    {
+
+        <div class="card" style="width: 10rem;">
+            <img class="card-img-top" src="~/images/@item.ImageUrl" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">@item.Name</h5>
+                <h5 class="card-title">@item.Surname</h5>
+            </div>
+        </div>
+    }
+
+    <a asp-controller="Home" asp-action="Register" class="m-5 btn btn-primary">Go Registration</a>
+

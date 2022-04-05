@@ -1,0 +1,21 @@
+﻿@model RazorProject.Models.PersonViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+}
+
+
+    <form asp-action="Register" asp-controller="Home" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>Name</label>
+            <input  asp-for="@Model.Person.Name" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+            <label>Surname</label>
+            <input asp-for="@Model.Person.Surname" placeholder="Enter surname">
+        </div>
+        <div class="form-group">
+            <label>Upload Image</label>
+            <input type="file" asp-for="@Model.File">
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>

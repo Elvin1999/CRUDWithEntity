@@ -1,0 +1,24 @@
+﻿@model RazorProject.Models.PlayerViewModel
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+</head>
+<body>
+
+    <form asp-controller="Player" asp-action="Add">
+        Id : <input asp-for="Player.Id" />
+        <br />
+        Name : <input asp-for="Player.Name" />
+        <br />
+        Score : <input asp-for="Player.Score" />
+        <br />
+        <button type="submit">Add</button>
+    </form>
+
+</body>
+</html>
